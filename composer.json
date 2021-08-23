@@ -1,0 +1,92 @@
+{
+  "name": "shopper/framework",
+  "description": "An eCommerce administration built with Laravel for create and manage online shop.",
+  "keywords": [
+    "laravel",
+    "admin",
+    "shopper",
+    "e-commerce"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arthur Monney",
+      "email": "arthur@shopperlabs.io",
+      "homepage": "https://twitter.com/MonneyArthur",
+      "role": "Developer"
+    },
+    {
+      "name": "Jean-Vincent QUILICHINI",
+      "email": "jeanvincent@shopperlabs.io",
+      "homepage": "https://twitter.com/jvq_txt",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8",
+    "ext-intl": "*",
+    "ext-json": "*",
+    "askedio/laravel-soft-cascade": "^8.1",
+    "bacon/bacon-qr-code": "^2.0",
+    "blade-ui-kit/blade-heroicons": "^1.2",
+    "blade-ui-kit/blade-ui-kit": "^0.2.0",
+    "doctrine/dbal": "^3.0",
+    "illuminate/support": "^8.0",
+    "jenssegers/agent": "^2.6",
+    "laravel/cashier": "^12.10",
+    "laravel/helpers": "^1.4.1",
+    "laravel/ui": "^3.2",
+    "lavary/laravel-menu": "^1.8.3",
+    "livewire-ui/modal": "^1.0.0",
+    "livewire/livewire": "^2.5",
+    "maatwebsite/excel": "^3.1",
+    "maatwebsite/laravel-sidebar": "^2.4",
+    "milon/barcode": "^8.0.1",
+    "moneyphp/money": "^3.3",
+    "pragmarx/google2fa": "^7.0|^8.0",
+    "reecem/mocker": "1.1.*",
+    "spatie/laravel-analytics": "^3.11",
+    "spatie/laravel-permission": "^3.2",
+    "stevebauman/location": "^5.2"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.4",
+    "nunomaduro/collision": "^5.3",
+    "nunomaduro/phpinsights": "^2.0",
+    "orchestra/testbench": "^5.0|^6.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "files": [
+      "src/Helpers/helpers.php"
+    ],
+    "psr-4": {
+      "Shopper\\Framework\\": "src/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Shopper\\Framework\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shopper\\Framework\\FrameworkServiceProvider"
+      ],
+      "aliases": {
+        "Shopper": "Shopper\\Framework\\Facades\\Shopper"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
