@@ -133,7 +133,6 @@ class Show extends Component
 
     public function render()
     {
-
         return view('shopper::livewire.orders.show', [
             //'items' => $this->order->items()->with('product')->simplePaginate($this->perPage),
             'items' => $this->order->items,
